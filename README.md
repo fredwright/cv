@@ -7,4 +7,8 @@ personal resume using:
 	jade
 	gulp
 
-clone and run on port 9000 using 'gulp' command
+run with:
+
+	npm install
+	gulp
+	http://localhost:9000/
