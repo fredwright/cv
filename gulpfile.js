@@ -16,7 +16,8 @@ var gulp = require('gulp');
 // plugins
 var jade = require('gulp-jade'),
     stylus = require('gulp-stylus'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    autoprefixer = require('gulp-autoprefixer');
 
 // paths
 var app = './app',
@@ -31,6 +32,7 @@ var app = './app',
 gulp.task('stylus', function() {
     gulp.src(app + '/*.styl')
         .pipe(stylus())
+        .pipe(autoprefixer())
         .pipe(gulp.dest(dist + css))
         .pipe(connect.reload());
 });

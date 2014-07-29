@@ -9,7 +9,8 @@
     "gulp-connect": "~2.0.5",
     "gulp-sass": "~0.7.2",
     "gulp-jade": "~0.6.1",
-    "gulp-stylus": "~1.1.0"
+    "gulp-stylus": "~1.1.0",
+    "gulp-autoprefixer": "0.0.8"
   },
   "repository": {
     "type": "git",
