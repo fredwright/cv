@@ -8,6 +8,7 @@
 // circles
 
 .circle
+  display: none
   border-radius: 50%
   overflow: auto
   margin: auto
@@ -18,6 +19,8 @@
   width: $width-circle
   height: $width-circle
   left: ($width-timeline-line/2 - $width-circle/2)
+  @media screen and (min-width: $break-small)
+    display: block
 
 circle($color, $diameter)
   background-color: $color
@@ -25,27 +28,40 @@ circle($color, $diameter)
 // lines
 
 .line
+  display: none
   height: 50%
   position: absolute
   left: 0
+  border-left: $width-timeline-line solid
+  @media screen and (min-width: $break-small)
+    display: block
 
 line-above($color)
   top: 0
-  border-left: $width-timeline-line solid $color
+  border-color: $color
 
 line-below($color)
   top: 50%
-  border-left: $width-timeline-line solid $color
+  border-color: $color
 
 // dates
 
 .date
-  margin: auto
+  display: none
   position: absolute
-  top: 50%
-  bottom: 0
+  margin: auto
+  bottom: -2rem
   right: auto
-  left: ($width-timeline-line/2 + $width-circle)
+  font-size: 1.4rem
+  &:before
+    content: "20"
+  @media screen and (min-width: $break-small)
+    display: block
+    top: 50%
+    left: ($width-timeline-line/2 + $width-circle)
+    font-size: 1rem
+    &:before
+      content: ""
 
 // mixins
 
@@ -59,18 +75,30 @@ area($color)
   header&
     .line
       line-below($color)
-  section&
-    border-left: $width-timeline-line solid $color 
+    .date
+      display: block
   footer&
     .line
       line-above($color)
+  @media screen and (min-width: $break-small)
+    section&
+      border-left: $width-timeline-line solid $color 
 
 .title
   .circle
-    width: $width-circle-title
-    height: $width-circle-title
-    left: ($width-timeline-line/2 - $width-circle-title/2)
+    display: block
+    width: ($width-circle-title/2)
+    height: ($width-circle-title/2)
+    left: 1rem
     background-color: $color-title
+    @media screen and (min-width: $break-small)
+      width: ($width-circle-title*2/3)
+      height: ($width-circle-title*2/3)
+      left: ($width-timeline-line/2 - $width-circle-title*1/3)
+    @media screen and (min-width: $break-large)
+      width: $width-circle-title
+      height: $width-circle-title
+      left: ($width-timeline-line/2 - $width-circle-title/2)
   .date
     color: white
 
