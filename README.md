@@ -11,3 +11,4 @@ run with:
 
 	npm install
 	gulp
+	http://localhost:9000/
