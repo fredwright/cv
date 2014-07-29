@@ -1,0 +1,89 @@
+
+// ====================================================
+
+// SIDEBAR
+
+// ====================================================
+
+// circles
+
+.circle
+  border-radius: 50%
+  overflow: auto
+  margin: auto
+  position: absolute
+  top: 0
+  bottom: 0
+  right: auto
+  width: $width-circle
+  height: $width-circle
+  left: ($width-timeline-line/2 - $width-circle/2)
+
+circle($color, $diameter)
+  background-color: $color
+
+// lines
+
+.line
+  height: 50%
+  position: absolute
+  left: 0
+
+line-above($color)
+  top: 0
+  border-left: $width-timeline-line solid $color
+
+line-below($color)
+  top: 50%
+  border-left: $width-timeline-line solid $color
+
+// dates
+
+.date
+  margin: auto
+  position: absolute
+  top: 50%
+  bottom: 0
+  right: auto
+  left: ($width-timeline-line/2 + $width-circle)
+
+// mixins
+
+area($color)
+  .circle
+    background-color: $color
+  .line
+    border-color: $color
+  .date
+    color: $color
+  header&
+    .line
+      line-below($color)
+  section&
+    border-left: $width-timeline-line solid $color 
+  footer&
+    .line
+      line-above($color)
+
+.title
+  .circle
+    width: $width-circle-title
+    height: $width-circle-title
+    left: ($width-timeline-line/2 - $width-circle-title/2)
+    background-color: $color-title
+  .date
+    color: white
+
+.uni
+  area($color-uni)
+
+.saab
+  area($color-saab)
+
+.chp
+  area($color-chp)
+
+.home
+  area($color-home)
+
+// ====================================================
