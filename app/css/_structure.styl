@@ -5,6 +5,13 @@
 
 // ====================================================
 
+alignleft()
+  @media screen and (min-width: $break-small)
+    section &
+      margin-left: ($width-timeline-line*-1)
+
+// ====================================================
+
 * 
   margin: 0
   font-family: $font-text
@@ -13,14 +20,15 @@
 html 
   height: 100%
   font-size: 12px
+  color: $color-font
   overflow-y: scroll
 
 body
-  margin: 2rem 2rem
+  margin: 2rem 2rem 6rem 2rem
   overflow: visible
   max-width: 84rem
   @media screen and (min-width: $break-large)
-    margin: 2rem auto
+    margin: 2rem auto 6rem auto
 
 header, section, footer
   position: relative
@@ -32,8 +40,9 @@ header, section, footer
     padding-left: ($width-timeline/2)
     margin-left: ($width-timeline/2)
 
-section *
-  @media screen and (min-width: $break-small)
-    margin-left: ($width-timeline-line*-1)
+.skills
+  alignleft()
+  padding-top: (1/3)rem
+  color: $color-title
 
 // ====================================================
