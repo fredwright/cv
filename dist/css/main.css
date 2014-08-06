@@ -1,0 +1,299 @@
+@font-face {
+  font-family: 'liberation_sansregular';
+  src: url("LiberationSans-Regular-webfont.eot");
+  src: url("LiberationSans-Regular-webfont.eot?#iefix") format('embedded-opentype'), url("LiberationSans-Regular-webfont.woff") format('woff'), url("LiberationSans-Regular-webfont.ttf") format('truetype'), url("LiberationSans-Regular-webfont.svg#liberation_sansregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'liberation_serifregular';
+  src: url("LiberationSerif-Regular-webfont.eot");
+  src: url("LiberationSerif-Regular-webfont.eot?#iefix") format('embedded-opentype'), url("LiberationSerif-Regular-webfont.woff") format('woff'), url("LiberationSerif-Regular-webfont.ttf") format('truetype'), url("LiberationSerif-Regular-webfont.svg#liberation_serifregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  font-family: "liberation_sansregular", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 12px;
+  color: #000;
+  overflow-y: scroll;
+}
+body {
+  margin: 2rem 2rem 6rem 2rem;
+  overflow: visible;
+  max-width: 84rem;
+}
+@media screen and (min-width: 54rem) {
+  body {
+    margin: 2rem auto 6rem auto;
+  }
+}
+header,
+section,
+footer {
+  position: relative;
+  padding: 0;
+}
+@media screen and (min-width: 36rem) {
+  header,
+  section,
+  footer {
+    padding-left: 10%;
+    margin-left: 10%;
+  }
+}
+@media screen and (min-width: 54rem) {
+  header,
+  section,
+  footer {
+    padding-left: 15%;
+    margin-left: 15%;
+  }
+}
+.skills {
+  padding-top: 0.333333333333333rem;
+  color: #de6868;
+}
+@media screen and (min-width: 36rem) {
+  section .skills {
+    margin-left: -0.333333333333333rem;
+  }
+}
+h1,
+h2,
+h3 {
+  font-family: "liberation_serifregular", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+h1 {
+  margin: 0 0 0 10rem;
+  font-size: 3rem;
+  line-height: 20rem;
+}
+@media screen and (min-width: 36rem) {
+  h1 {
+    margin: 0 0 0 6rem;
+  }
+}
+h2 {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  margin: 6rem 0 0 0;
+}
+@media screen and (min-width: 36rem) {
+  h2 {
+    margin: 4rem 0 0 0;
+  }
+}
+.home h2 {
+  margin: 4rem 0 0 0;
+}
+h3 {
+  font-size: 1.2rem;
+  line-height: 2.8rem;
+  padding: 0.8rem 0 0 0;
+}
+@media screen and (min-width: 36rem) {
+  section h3 {
+    margin-left: -0.333333333333333rem;
+  }
+}
+@media screen and (min-width: 36rem) {
+  section p {
+    margin-left: -0.333333333333333rem;
+  }
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a:hover,
+a:visited:hover {
+  text-decoration: underline;
+}
+.skills a,
+.skills a:visited {
+  color: #de6868;
+}
+.circle {
+  display: none;
+  border-radius: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  width: 1rem;
+  height: 1rem;
+  left: -0.333333333333334rem;
+}
+@media screen and (min-width: 36rem) {
+  .circle {
+    display: block;
+  }
+}
+.line {
+  display: none;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  border-left: 0.333333333333333rem solid;
+}
+@media screen and (min-width: 36rem) {
+  .line {
+    display: block;
+  }
+}
+.date {
+  display: none;
+  position: absolute;
+  margin: auto;
+  top: -2rem;
+  right: auto;
+  font-size: 1.4rem;
+}
+.date:before {
+  content: "20";
+}
+@media screen and (min-width: 36rem) {
+  .date {
+    display: block;
+    top: 50%;
+    left: 1.166666666666666rem;
+    font-size: 1rem;
+  }
+  .date:before {
+    content: "";
+  }
+}
+.title .circle {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  left: 1rem;
+  background-color: #de6868;
+}
+@media screen and (min-width: 36rem) {
+  .title .circle {
+    width: 8rem;
+    height: 8rem;
+    left: -3.833333333333334rem;
+  }
+}
+@media screen and (min-width: 54rem) {
+  .title .circle {
+    width: 12rem;
+    height: 12rem;
+    left: -5.833333333333334rem;
+  }
+}
+.title .date {
+  color: #fff;
+}
+.uni .circle {
+  background-color: #bfb1d5;
+}
+.uni .line {
+  border-color: #bfb1d5;
+}
+.uni .date {
+  color: #bfb1d5;
+}
+header.uni .line {
+  top: 50%;
+  border-color: #bfb1d5;
+}
+header.uni .date {
+  display: block;
+}
+footer.uni .line {
+  top: 0;
+  border-color: #bfb1d5;
+}
+@media screen and (min-width: 36rem) {
+  section.uni {
+    border-left: 0.333333333333333rem solid #bfb1d5;
+  }
+}
+.saab .circle {
+  background-color: #fed1be;
+}
+.saab .line {
+  border-color: #fed1be;
+}
+.saab .date {
+  color: #fed1be;
+}
+header.saab .line {
+  top: 50%;
+  border-color: #fed1be;
+}
+header.saab .date {
+  display: block;
+}
+footer.saab .line {
+  top: 0;
+  border-color: #fed1be;
+}
+@media screen and (min-width: 36rem) {
+  section.saab {
+    border-left: 0.333333333333333rem solid #fed1be;
+  }
+}
+.chp .circle {
+  background-color: #abe1fd;
+}
+.chp .line {
+  border-color: #abe1fd;
+}
+.chp .date {
+  color: #abe1fd;
+}
+header.chp .line {
+  top: 50%;
+  border-color: #abe1fd;
+}
+header.chp .date {
+  display: block;
+}
+footer.chp .line {
+  top: 0;
+  border-color: #abe1fd;
+}
+@media screen and (min-width: 36rem) {
+  section.chp {
+    border-left: 0.333333333333333rem solid #abe1fd;
+  }
+}
+.home .circle {
+  background-color: #adddcf;
+}
+.home .line {
+  border-color: #adddcf;
+}
+.home .date {
+  color: #adddcf;
+}
+header.home .line {
+  top: 50%;
+  border-color: #adddcf;
+}
+header.home .date {
+  display: block;
+}
+footer.home .line {
+  top: 0;
+  border-color: #adddcf;
+}
+@media screen and (min-width: 36rem) {
+  section.home {
+    border-left: 0.333333333333333rem solid #adddcf;
+  }
+}

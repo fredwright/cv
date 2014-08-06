@@ -41,7 +41,7 @@ gulp.task('stylus', function() {
 gulp.task('jade', function() {
     gulp.src(app + '/*.jade')
         .pipe(jade())
-        .pipe(gulp.dest(dist))
+        .pipe(gulp.dest('.'))
         .pipe(connect.reload());
 });
 
@@ -66,7 +66,7 @@ gulp.task('watch', function() {
 // serve
 gulp.task('connect', function() {
   connect.server({
-    root: dist,
+    root: '.',
     port: 9000,
     livereload: true
   });
