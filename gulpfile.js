@@ -41,7 +41,7 @@ gulp.task('stylus', function() {
 gulp.task('jade', function() {
     gulp.src(app + '/*.jade')
         .pipe(jade())
-        .pipe(gulp.dest('.'))
+        .pipe(gulp.dest(dist))
         .pipe(connect.reload());
 });
 
@@ -49,6 +49,13 @@ gulp.task('jade', function() {
 gulp.task('fonts', function () {
     gulp.src(app + css + '/fonts/*')
         .pipe(gulp.dest(dist + css))
+        .pipe(connect.reload());
+});
+
+// move others
+gulp.task('others', function () {
+    gulp.src(app + '/*.ico')
+        .pipe(gulp.dest(dist))
         .pipe(connect.reload());
 });
 
@@ -61,16 +68,17 @@ gulp.task('watch', function() {
     gulp.watch(app + '/*.jade', ['jade']);
     gulp.watch(app + css + '/*.styl', ['stylus']);
     gulp.watch(app + css + '/fonts/*', ['fonts']);
+    gulp.watch(app + '/*.ico', ['otehrs']);
 });
 
 // serve
 gulp.task('connect', function() {
   connect.server({
-    root: '.',
+    root: dist,
     port: 9000,
     livereload: true
   });
 });
 
 // default
-gulp.task('default', [ 'jade', 'stylus', 'fonts', 'watch', 'connect' ]);
+gulp.task('default', [ 'jade', 'stylus', 'fonts', 'others', 'watch', 'connect' ]);
