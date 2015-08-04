@@ -5,35 +5,15 @@
 
 // ====================================================
 
-// circles
-
-.circle
-  display: none
-  border-radius: 50%
-  overflow: auto
-  margin: auto
-  position: absolute
-  top: 0
-  bottom: 0
-  right: auto
-  width: $width-circle
-  height: $width-circle
-  left: ($width-timeline-line/2 - $width-circle/2)
-  @media screen and (min-width: $break-small)
-    display: block
-
-circle($color, $diameter)
-  background-color: $color
-
 // lines
 
 .line
   display: none
-  height: 50%
+  height: 100%
   position: absolute
   left: 0
   border-left: $width-timeline-line solid
-  @media screen and (min-width: $break-small)
+  @media screen and (min-width: $break-large)
     display: block
 
 line-above($color)
@@ -41,7 +21,7 @@ line-above($color)
   border-color: $color
 
 line-below($color)
-  top: 50%
+  height: 100%
   border-color: $color
 
 // dates
@@ -50,66 +30,55 @@ line-below($color)
   display: none
   position: absolute
   margin: auto
-  top: -2rem
   right: auto
-  font-size: 1.4rem
+  font-size: $width-date
   &:before
     content: "20"
-  @media screen and (min-width: $break-small)
+    .home &
+      content: ""
+  @media screen and (min-width: $break-large)
+    font-size: $width-date*(3/4)
     display: block
-    top: 50%
-    left: ($width-timeline-line/2 + $width-circle)
-    font-size: 1rem
+    width: $width-timeline-line
+    text-align: center
+    left: 0
     &:before
       content: ""
 
 // sections
 
 area($color)
-  .circle
-    background-color: $color
   .line
-    border-color: $color
+    border-color: $color-date
   .date
+    z-index: 10
     color: $color
   header&
-    .line
-      line-below($color)
     .date
+      top: $width-date * -1
       display: block
-  footer&
+  @media screen and (min-width: $break-large)
     .line
-      line-above($color)
-  @media screen and (min-width: $break-small)
+      border-color: $color
+    .date
+      color: $color-date
+    header&
+      .date
+        top: 50%
     section&
-      border-left: $width-timeline-line solid $color 
+      border-left: $width-timeline-line solid $color
 
 .title
-  .circle
-    display: block
-    width: ($width-circle-title/2)
-    height: ($width-circle-title/2)
-    left: 1rem
-    background-color: $color-title
-    @media screen and (min-width: $break-small)
-      width: ($width-circle-title*2/3)
-      height: ($width-circle-title*2/3)
-      left: ($width-timeline-line/2 - $width-circle-title*1/3)
-    @media screen and (min-width: $break-large)
-      width: $width-circle-title
-      height: $width-circle-title
-      left: ($width-timeline-line/2 - $width-circle-title/2)
-  .date
-    color: white
-
-.uni
-  area($color-uni)
+  area($color-title)
 
 .saab
   area($color-saab)
 
 .chp
   area($color-chp)
+
+.quinyx
+  area($color-quinyx)
 
 .home
   area($color-home)

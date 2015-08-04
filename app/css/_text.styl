@@ -8,20 +8,24 @@
 h1, h2, h3
   font-family: $font-header
 h1
-  margin: 0 0 0 10rem
   font-size: 3rem
-  line-height: 20rem
+  line-height: 6rem
   @media screen and (min-width: $break-small)
-    margin: 0 0 0 6rem
-h2 
+    padding: $width-date 0 0 0
+
+h2
   font-size: 1.6rem
   line-height: 3rem
-  margin: 6rem 0 0 0
-  @media screen and (min-width: $break-small)
-    margin: 4rem 0 0 0
-.home h2
   margin: 4rem 0 0 0
-h3 
+  padding: $width-date 0 0 0
+  .title &
+    margin: 1rem 0 0 0
+  @media screen and (min-width: $break-large)
+    margin: 4rem 0 0 0
+    .title &
+      margin: 0
+
+h3
   alignleft()
   font-size: 1.2rem
   line-height: 2.8rem
