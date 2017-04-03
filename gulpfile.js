@@ -11,7 +11,7 @@
 //======================================================
 
 // gulp
-var gulp = require('gulp'); 
+var gulp = require('gulp');
 
 // plugins
 var jade = require('gulp-jade'),
@@ -81,4 +81,5 @@ gulp.task('connect', function() {
 });
 
 // default
-gulp.task('default', [ 'jade', 'stylus', 'fonts', 'others', 'watch', 'connect' ]);
+gulp.task('build', [ 'jade', 'stylus', 'fonts', 'others' ]);
+gulp.task('default', [ 'build', 'watch', 'connect' ]);

@@ -1,19 +1,27 @@
 {
-  "name": "cv",
+  "name": "fredwright",
   "version": "0.1.0",
   "author": "fred wright",
   "description": "fred wright cv",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp",
+    "start": "serve ./dist --single"
+  },
   "devDependencies": {
-    "gulp-util": "~2.2.14",
-    "gulp-connect": "~2.0.5",
-    "gulp-sass": "~0.7.2",
-    "gulp-jade": "~0.6.1",
-    "gulp-stylus": "~1.1.0",
+    "gulp": "^3.8.7",
     "gulp-autoprefixer": "0.0.8",
-    "gulp": "^3.8.7"
+    "gulp-connect": "~2.0.5",
+    "gulp-jade": "~0.6.1",
+    "gulp-sass": "~0.7.2",
+    "gulp-stylus": "~1.1.0",
+    "gulp-util": "~2.2.14"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:fredwright/fredwright.github.io.git"
+  },
+  "dependencies": {
+    "serve": "^5.1.2"
   }
 }
